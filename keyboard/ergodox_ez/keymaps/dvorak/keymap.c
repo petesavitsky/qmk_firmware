@@ -32,23 +32,23 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 // Otherwise, it needs KC_*
 [BASE] = KEYMAP(  // layer 0 : default
         // left hand
-        KC_EQL,         KC_1,           KC_2,    KC_3,   KC_4,   KC_5,   KC_LEFT,
-        KC_DELT,        KC_QUOT,        KC_COMM, KC_DOT, KC_P,   KC_Y,   TG(1),
-        KC_BSPC,        KC_A,           KC_O,    KC_E,   KC_U,   KC_I,
-        KC_LSFT,        CTL_T(KC_SCLN), KC_Q,    KC_J,   KC_K,   KC_X,   ALL_T(KC_NO),
+        KC_DEL,         KC_1,           KC_2,    KC_3,   KC_4,   KC_5,   KC_LEFT,
+        KC_EQL,        KC_QUOT,        KC_COMM, KC_DOT, KC_P,   KC_Y,   TG(1),
+        KC_CAPSLOCK,        KC_A,           KC_O,    KC_E,   KC_U,   KC_I,
+        KC_LSFT,       CTL_T(KC_SCLN), KC_Q,    KC_J,   KC_K,   KC_X,   MT(MOD_LGUI, KC_CAPSLOCK),
         LT(SYMB,KC_GRV),KC_QUOT,      LALT(KC_LSFT),  KC_LEFT,KC_RGHT,
                                               ALT_T(KC_APP),  KC_LGUI,
                                                               KC_HOME,
-                                               KC_SPC,KC_BSPC,KC_END,
+                                               MT(MOD_LGUI,KC_TAB),KC_BSPC,KC_END,
         // right hand
              KC_RGHT,     KC_6,   KC_7,   KC_8,   KC_9,   KC_0,             KC_BSLS,
              TG(1),       KC_F,   KC_G,   KC_C,   KC_R,   KC_L,             KC_SLSH,
-                          KC_D,   KC_H,   KC_T,   KC_N,   LT(MDIA, KC_S),   KC_MINS,
-             MEH_T(KC_NO),KC_B,   KC_M,   KC_W,   KC_V,   CTL_T(KC_Z),      KC_RSFT,
+                          KC_D,   KC_H,   KC_T,   KC_N,   KC_S,   KC_MINS,
+             MT(MOD_LGUI | MOD_LSFT, KC_ESC), KC_B,   KC_M,   KC_W,   KC_V,   CTL_T(KC_Z),      KC_RSFT,
                                   KC_UP,  KC_DOWN,KC_LBRC,KC_RBRC,          KC_FN1,
-             KC_LALT,        CTL_T(KC_ESC),
+             KC_LALT,        CTL_T(KC_GRV),
              KC_PGUP,
-             KC_PGDN,KC_TAB, KC_ENT
+             KC_PGDN,KC_ENT, MT(MOD_RGUI,KC_SPC)
     ),
 /* Keymap 1: Symbol Layer
  *
